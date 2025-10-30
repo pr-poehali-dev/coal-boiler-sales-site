@@ -30,26 +30,26 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
+      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-border shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Flame" className="text-primary" size={32} />
             <span className="text-2xl font-bold text-foreground">ТеплоКот</span>
           </div>
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-6 text-foreground">
             <button onClick={() => scrollToSection('hero')} className="hover:text-primary transition-colors">Главная</button>
             <button onClick={() => scrollToSection('benefits')} className="hover:text-primary transition-colors">Преимущества</button>
             <button onClick={() => scrollToSection('models')} className="hover:text-primary transition-colors">Модели</button>
             <button onClick={() => scrollToSection('pricing')} className="hover:text-primary transition-colors">Цены</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Контакты</button>
           </nav>
-          <Button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90">
+          <Button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-primary-foreground">
             Заказать
           </Button>
         </div>
       </header>
 
-      <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-white to-secondary/10">
+      <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/20 via-black to-secondary/20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
@@ -81,7 +81,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="benefits" className="py-20 bg-white">
+      <section id="benefits" className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-foreground">
             Почему выбирают наши котлы
@@ -247,7 +247,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="pricing" className="py-20 bg-white">
+      <section id="pricing" className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-foreground">
             Цены и комплектация
@@ -368,7 +368,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-gradient-to-br from-secondary/10 via-white to-primary/10">
+      <section id="contact" className="py-20 bg-gradient-to-br from-secondary/20 via-black to-primary/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-foreground">
