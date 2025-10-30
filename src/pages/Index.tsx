@@ -49,36 +49,44 @@ export default function Index() {
         </div>
       </header>
 
-      <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/20 via-black to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                Угольные котлы нового поколения
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                Экономичное отопление с высоким КПД до 92%. Низкий расход угля и надёжность на годы.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Icon name="Phone" className="mr-2" size={20} />
-                  Получить консультацию
-                </Button>
-                <Button size="lg" variant="outline" onClick={() => scrollToSection('models')}>
-                  <Icon name="List" className="mr-2" size={20} />
-                  Выбрать модель
-                </Button>
-              </div>
-            </div>
-            <div className="relative animate-scale-in">
-              <img 
-                src="https://cdn.poehali.dev/projects/05d7f894-a11c-4f57-835b-9ff1370c6611/files/f39313e6-efb0-494f-9e85-7239492c1212.jpg" 
-                alt="Угольный котёл" 
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
+      <section id="hero" className="relative py-32 md:py-48 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://cdn.poehali.dev/files/dfbd9923-3951-4ef4-9a1c-945becb5303a.jpg" 
+            alt="Горящий уголь" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight" style={{
+              background: 'linear-gradient(135deg, #EF7F1A 0%, #FF6B35 50%, #DC2626 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              textShadow: '0 0 40px rgba(239, 127, 26, 0.3)'
+            }}>
+              Угольные котлы нового поколения
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto drop-shadow-lg">
+              Экономичное отопление с высоким КПД до 92%. Низкий расход угля и надёжность на годы.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center pt-4">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-xl shadow-primary/20">
+                <Icon name="Phone" className="mr-2" size={24} />
+                Получить консультацию
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => scrollToSection('models')} className="border-primary/50 text-white hover:bg-primary/10 text-lg px-8 py-6">
+                <Icon name="List" className="mr-2" size={24} />
+                Выбрать модель
+              </Button>
             </div>
           </div>
         </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
       </section>
 
       <section id="benefits" className="py-20 bg-black">
